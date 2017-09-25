@@ -1,0 +1,45 @@
+server:
+  port: 8080
+  context-path:
+
+logging:
+  level:
+    org.springframework.security: warn
+    org.springframework.cloud: warn
+    com.alibaba.druid.pool.DruidDataSource: warn
+    jdbc:
+      audit: warn
+      resultset: warn
+      sqlonly: warn
+      resultsettable: warn
+      sqltiming: warn
+      connection: warn
+
+jwt:
+  header: Authorization
+  secret: mySecret
+  expiration: 604800
+  route:
+    authentication:
+      path: auth
+      refresh: refresh
+
+request:
+  matchers:
+    gets:
+      - /gets
+    heads:
+      - /heads
+      - /213
+    posts:
+      - /posts
+    puts:
+      - /puts
+    patchs:
+      - /patchs
+    deletes:
+      - /deletes
+    optiones:
+      - /optiones
+    traces:
+      - /traces
