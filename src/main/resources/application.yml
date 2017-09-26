@@ -4,9 +4,7 @@ server:
 
 logging:
   level:
-    org.springframework.security: warn
-    org.springframework.cloud: warn
-    com.alibaba.druid.pool.DruidDataSource: warn
+    org.springframework.security: info
     jdbc:
       audit: warn
       resultset: warn
